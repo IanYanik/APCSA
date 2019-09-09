@@ -8,7 +8,7 @@ public class MyClass
 
 
 
-static void Nerd() 
+public static void Nerd() 
     {
     System.out.println("hhehehehehe");
 
