@@ -13,3 +13,8 @@ public static void Nerd()
     System.out.println("hhehehehehe");
 
     }
+
+
+for (i = 0; i<=10; i++){
+
+}
