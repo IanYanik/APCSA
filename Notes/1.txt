@@ -1,0 +1,2 @@
+get rid of a = 2;
+get rid of println statement
