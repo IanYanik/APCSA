@@ -14,17 +14,17 @@ public class FileEdit {
   int exist = 0;
   if(file.exists()){
   exist = 1;
-  System.out.println("File found!");
+  //System.out.println("File found!");
   }
   else{
-  System.out.println("File not found!");
+  //System.out.println("File not found!");
   }
   try {
   if(exist == 1){
   	  FileWriter fw = new FileWriter(file);
 	  bw = new BufferedWriter(fw);
 	  bw.write(text);
-     System.out.println("File written Successfully");
+    // System.out.println("File written Successfully");
   }
   }
   catch (IOException ioe) {
