@@ -1,5 +1,6 @@
 import java.io.*;
 import java.net.*;
+import java.util.*; 
  
 /**
  * This program demonstrates a simple TCP/IP socket server that echoes every
@@ -9,11 +10,13 @@ import java.net.*;
  * @author www.codejava.net
  */
 public class ReverseServer {
- 
+static String mostRecent = " ";
     public static void main(String[] args) {
-        if (args.length < 1) return;
- 
-        int port = Integer.parseInt(args[0]);
+         
+         String[] argss = {"9090"}; 
+        if (argss.length < 1) return;
+        
+        int port = Integer.parseInt(argss[0]);
  
         try (ServerSocket serverSocket = new ServerSocket(port)) {
  
@@ -22,7 +25,7 @@ public class ReverseServer {
             while (true) {
                 Socket socket = serverSocket.accept();
                 System.out.println("New client connected");
- 
+                
                 new ServerThread(socket).start();
             }
  
@@ -30,5 +33,11 @@ public class ReverseServer {
             System.out.println("Server exception: " + ex.getMessage());
             ex.printStackTrace();
         }
+    }
+    public static void add(String newMessage){
+    newMessage = mostRecent;
+    }
+    public static String get(){
+    return mostRecent;
     }
 }

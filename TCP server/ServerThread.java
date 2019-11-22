@@ -14,6 +14,7 @@ public class ServerThread extends Thread {
     }
  
     public void run() {
+    String none = " ";
         try {
             InputStream input = socket.getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(input));
