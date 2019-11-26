@@ -4,6 +4,9 @@ import java.io.*;
 public class ReverseClient {
  
     public static void main(String[] args) {
+    
+   // Thread t1 = new Thread(new RunnableChecker ());
+   // t1.start();
         if (args.length < 2) return;
  
         String hostname = args[0];

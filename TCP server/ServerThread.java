@@ -9,6 +9,8 @@ public class ServerThread extends Thread {
     }
  
     public void run() {
+    Thread t1 = new Thread(new RunnableChecker (socket));
+    t1.start();
     String none = " ";
         try {
             InputStream input = socket.getInputStream();

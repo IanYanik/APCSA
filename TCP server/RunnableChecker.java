@@ -1,5 +1,7 @@
-public class Checker {
-public static void main(String[] args) {
+import java.io.*;
+import java.net.*;
+public class RunnableChecker implements Runnable {
+public void run(){
 System.out.println(FileEdit.textToString("Convo"));
 String lastMessage = FileEdit.textToString("Convo");
 while (true) {
@@ -10,5 +12,5 @@ System.out.println(FileEdit.textToString("Convo"));
 
 lastMessage = FileEdit.textToString("Convo");
 }
-}
+   } 
 }
