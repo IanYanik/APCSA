@@ -17,6 +17,13 @@ public class FileEdit {
   //System.out.println("File found!");
   }
   else{
+  try {
+  file.createNewFile();
+}
+catch(Exception e) {
+  
+}
+  
   //System.out.println("File not found!");
   }
   try {

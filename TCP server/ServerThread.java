@@ -1,11 +1,6 @@
 import java.io.*;
 import java.net.*;
  
-/**
- * This thread is responsible to handle client connection.
- *
- * @author www.codejava.net
- */
 public class ServerThread extends Thread {
     private Socket socket;
  
@@ -28,8 +23,9 @@ public class ServerThread extends Thread {
             do {
                 text = reader.readLine();
                 String reverseText = new StringBuilder(text).reverse().toString();
-                writer.println("Server: " + reverseText);
-                writer.println("Server: " + text);
+                  //writer.println(FileEdit.textToString("Convo"));
+                  writer.println("Message Recieved");
+                  FileEdit.writeToFile("Convo", text);
  
             } while (!text.equals("bye"));
  

@@ -2,13 +2,6 @@ import java.io.*;
 import java.net.*;
 import java.util.*; 
  
-/**
- * This program demonstrates a simple TCP/IP socket server that echoes every
- * message from the client in reversed form.
- * This server is multi-threaded.
- *
- * @author www.codejava.net
- */
 public class ReverseServer {
 static String mostRecent = " ";
     public static void main(String[] args) {
