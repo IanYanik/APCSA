@@ -1,2 +1,3 @@
-java ReverseClient localhost 9090
+@ECHO OFF
+java ReverseClient
 set /p DUMMY=Hit ENTER to continue...

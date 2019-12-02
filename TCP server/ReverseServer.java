@@ -1,12 +1,28 @@
 import java.io.*;
 import java.net.*;
-import java.util.*; 
+import java.util.*;
+
  
 public class ReverseServer {
 static String mostRecent = " ";
     public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);
+    int loop = 1;
+    String portt = "9090";
+    while (loop == 1){
+    System.out.print("Enter Port: ");
+    portt = myObj.nextLine();
+    int result = Integer.parseInt(portt);
+    //System.out.println(result);
+    if (result >= 2000 && result <= 9999){
+    loop = 0;
+    }
+    else {
+    System.out.println("Please enter a valid port number: (2000-9999).");
+    }
+    }
          
-         String[] argss = {"9090"}; 
+         String[] argss = {portt}; 
         if (argss.length < 1) return;
         
         int port = Integer.parseInt(argss[0]);

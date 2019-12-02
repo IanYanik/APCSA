@@ -1,1 +1,3 @@
+@ECHO OFF
 java ReverseServer
+set /p DUMMY=Hit ENTER to continue...
