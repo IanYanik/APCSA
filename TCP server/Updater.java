@@ -1,17 +1,15 @@
 import java.io.*;
 import java.net.*;
 import java.util.*;
-public class RunnableChecker implements Runnable {
-public RunnableChecker(String ipp, String portt){
+public class Updater implements Runnable {
+public Updater(Socket socket){
 //ipp = "206.57.167.141";
 //portt = "9090";
-String[] argss = {ipp, portt};
-        if (argss.length < 2) return;
+//String[] argss = {ipp, portt};
+//String hostname = argss[0];
+//int port = Integer.parseInt(argss[1]);
  
-        String hostname = argss[0];
-        int port = Integer.parseInt(argss[1]);
- 
-        try (Socket socket = new Socket(hostname, port)) {
+        try {
  
             OutputStream output = socket.getOutputStream();
             PrintWriter writer = new PrintWriter(output, true);

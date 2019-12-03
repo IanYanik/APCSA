@@ -24,8 +24,8 @@ public class ReverseClient {
     argss[1] = portt;
    //Thread t1 = new Thread(new RunnableChecker ());
    //t1.start();
-   Runnable r = new RunnableChecker(argss[0], argss[1]);
-   new Thread(r).start();
+   //Runnable r = new RunnableChecker(argss[0], argss[1]);
+   //new Thread(r).start();
         if (argss.length < 2) return;
  
         String hostname = argss[0];
@@ -37,7 +37,7 @@ public class ReverseClient {
             PrintWriter writer = new PrintWriter(output, true);
  
             Console console = System.console();
-            String text;
+            String text = "null";
  
             do {
                 //System.out.println("1");
