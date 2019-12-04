@@ -21,7 +21,8 @@ public Updater(Socket socket){
                 //System.out.println("1");
                 //text = console.readLine("Enter text: ");
                 //System.out.println("2");
-                writer.println("test");
+                FileEdit.textToString("convo");
+                //writer.println("test");
                 //System.out.println("3");
                 //InputStream input = socket.getInputStream();
                 //System.out.println("4");

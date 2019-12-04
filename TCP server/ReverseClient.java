@@ -41,6 +41,8 @@ public class ReverseClient {
  
             do {
                 //System.out.println("1");
+                //System.out.print("Enter text: ");
+                //text = myObj.nextLine();
                 text = console.readLine("Enter text: ");
                 //System.out.println("2");
                 writer.println(text);
