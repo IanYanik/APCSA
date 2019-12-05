@@ -1,0 +1,3 @@
+@ECHO OFF
+java ReverseClientPrinter
+set /p DUMMY=Hit ENTER to continue...

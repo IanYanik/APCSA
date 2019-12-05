@@ -8,44 +8,35 @@ public Updater(Socket socket){
 //String[] argss = {ipp, portt};
 //String hostname = argss[0];
 //int port = Integer.parseInt(argss[1]);
- 
-        try {
+         try {
+            InputStream input = socket.getInputStream();
+            BufferedReader reader = new BufferedReader(new InputStreamReader(input));
  
             OutputStream output = socket.getOutputStream();
             PrintWriter writer = new PrintWriter(output, true);
  
-            Console console = System.console();
+ 
             String text;
  
             do {
                 //System.out.println("1");
-                //text = console.readLine("Enter text: ");
+                //text = reader.readLine();
                 //System.out.println("2");
-                FileEdit.textToString("convo");
-                //writer.println("test");
+                //String reverseText = new StringBuilder(text).reverse().toString();
                 //System.out.println("3");
-                //InputStream input = socket.getInputStream();
+                //writer.println(FileEdit.textToString("Convo"));
+                writer.println(FileEdit.textToString("Convo"));
                 //System.out.println("4");
-                //BufferedReader reader = new BufferedReader(new InputStreamReader(input));
-                //System.out.println("5");
-                //String time = reader.readLine();
-                //System.out.println("6");
-                //System.out.println(time);
-                //System.out.println("7");
+                //FileEdit.writeToFile("Convo", text);
+               // System.out.println("5");
             } while (true);
  
             //socket.close();
- 
-        } catch (UnknownHostException ex) {
- 
-            System.out.println("Server not found: " + ex.getMessage());
- 
         } catch (IOException ex) {
- 
-            System.out.println("I/O error: " + ex.getMessage());
-        }
-}
+            System.out.println("Server exception: " + ex.getMessage());
+            ex.printStackTrace();
+        }}
 public void run(){
-System.out.println("test");
+//System.out.println("test");
 } 
 }
