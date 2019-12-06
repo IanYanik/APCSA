@@ -40,21 +40,18 @@ public class ReverseClient {
             String text = "null";
  
             do {
-                //System.out.println("1");
-                //System.out.print("Enter text: ");
-                //text = myObj.nextLine();
                 text = console.readLine("Enter text: ");
-                //System.out.println("2");
+               
                 writer.println(text);
-                //System.out.println("3");
+                
                 InputStream input = socket.getInputStream();
-                //System.out.println("4");
+               
                 BufferedReader reader = new BufferedReader(new InputStreamReader(input));
-                //System.out.println("5");
+                
                 String time = reader.readLine();
-                //System.out.println("6");
+               
                 System.out.println(time);
-                //System.out.println("7");
+                
             } while (!text.equals("bye"));
  
             socket.close();

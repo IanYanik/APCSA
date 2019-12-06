@@ -11,8 +11,13 @@ public class ServerThread extends Thread {
     public void run() {
     //Thread t1 = new Thread(new RunnableChecker (socket));
     //t1.start();
-   Runnable r = new Updater(socket);
-   new Thread(r).start();
+   //Runnable r = new Updater(socket);
+   System.out.println("one");
+   // MyThread myThread = new MyThread();
+  //myTread.start();
+   new Updater(socket).start();
+   System.out.println("two");
+   //new Thread(r).start();
    //System.out.println(socket);
     String none = " ";
         try {
@@ -27,11 +32,13 @@ public class ServerThread extends Thread {
  
             do {
                 //System.out.println("1");
+                System.out.println("start");
                 text = reader.readLine();
                 //System.out.println("2");
-                String reverseText = new StringBuilder(text).reverse().toString();
+                //String reverseText = new StringBuilder(text).reverse().toString();
                 //System.out.println("3");
                 //writer.println(FileEdit.textToString("Convo"));
+                System.out.println("New message");
                 writer.println("Message Recieved");
                 //System.out.println("4");
                 FileEdit.writeToFile("Convo", text);

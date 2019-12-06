@@ -1,14 +1,16 @@
 import java.io.*;
 import java.net.*;
 import java.util.*;
-public class Updater implements Runnable {
+public class Updater extends Thread {
 public Updater(Socket socket){
+System.out.println("One");
 //ipp = "206.57.167.141";
 //portt = "9090";
 //String[] argss = {ipp, portt};
 //String hostname = argss[0];
 //int port = Integer.parseInt(argss[1]);
          try {
+         System.out.println("Two");
             InputStream input = socket.getInputStream();
             BufferedReader reader = new BufferedReader(new InputStreamReader(input));
  
@@ -37,6 +39,6 @@ public Updater(Socket socket){
             ex.printStackTrace();
         }}
 public void run(){
-//System.out.println("test");
+System.out.println("test");
 } 
 }
