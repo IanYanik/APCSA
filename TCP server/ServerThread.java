@@ -15,7 +15,7 @@ public class ServerThread extends Thread {
    System.out.println("one");
    // MyThread myThread = new MyThread();
   //myTread.start();
-   new Updater(socket).start();
+   
    System.out.println("two");
    //new Thread(r).start();
    //System.out.println(socket);

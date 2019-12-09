@@ -34,8 +34,11 @@ static String mostRecent = " ";
             while (true) {
                 Socket socket = serverSocket.accept();
                 System.out.println("New client connected");
-                
+                System.out.println("1");
                 new ServerThread(socket).start();
+                System.out.println("2");
+                new Updater(socket).start();
+                System.out.println("3");
             }
  
         } catch (IOException ex) {
