@@ -48,9 +48,9 @@ public class ReverseClient {
                
                 BufferedReader reader = new BufferedReader(new InputStreamReader(input));
                 
-                String time = reader.readLine();
+                //String time = reader.readLine();
                
-                System.out.println(time);
+                //System.out.println(time);
                 
             } while (!text.equals("bye"));
  

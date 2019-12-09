@@ -50,9 +50,9 @@ public class ReverseClientPrinter {
                 InputStream input = socket.getInputStream();
                 //System.out.println("4");
                 BufferedReader reader = new BufferedReader(new InputStreamReader(input));
-                //System.out.println("5");
+                System.out.println(input);
                 String time = reader.readLine();
-                //System.out.println("6");
+                System.out.println("6");
                 System.out.println(time);
                 //System.out.println("7");
             } while (!text.equals("bye"));

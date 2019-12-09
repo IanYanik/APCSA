@@ -39,7 +39,7 @@ public class ServerThread extends Thread {
                 //System.out.println("3");
                 //writer.println(FileEdit.textToString("Convo"));
                 System.out.println("New message");
-                writer.println("Message Recieved");
+                //writer.println("Message Recieved");
                 //System.out.println("4");
                 FileEdit.writeToFile("Convo", text);
                // System.out.println("5");

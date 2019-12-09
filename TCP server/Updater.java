@@ -29,9 +29,9 @@ public Updater(Socket socket){
                 //String reverseText = new StringBuilder(text).reverse().toString();
                 //System.out.println("3");
                 //writer.println(FileEdit.textToString("Convo"));
-                System.out.println("Get");
+                
                 writer.println(FileEdit.textToString("Convo"));
-                System.out.println("Out");
+                
                 //System.out.println("4");
                 //FileEdit.writeToFile("Convo", text);
                // System.out.println("5");
