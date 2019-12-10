@@ -29,9 +29,9 @@ public Updater(Socket socket){
                 //String reverseText = new StringBuilder(text).reverse().toString();
                 //System.out.println("3");
                 //writer.println(FileEdit.textToString("Convo"));
-                //The client is not reciving the updates. This is either due to the reciver, or the sender, it is unknown wich yet.
+                //writer.println("Bzz");
                 writer.println(FileEdit.textToString("Convo"));
-                
+                //System.out.println(output);
                 //System.out.println("4");
                 //FileEdit.writeToFile("Convo", text);
                // System.out.println("5");
