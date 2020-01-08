@@ -7,13 +7,16 @@ class text extends JFrame implements ActionListener {
     static JTextField t; 
   
     // JFrame 
-    static JFrame f; 
-  
+    static JFrame f;
+    
+
+        
     // JButton 
     static JButton b; 
   
     // label to display text 
     static JLabel l; 
+    static JLabel l2;
   
     // default constructor 
     text() 
@@ -27,13 +30,20 @@ class text extends JFrame implements ActionListener {
         f = new JFrame("textfield"); 
   
         // create a label to display text 
-        l = new JLabel("nothing entered"); 
+        l = new JLabel("nothing entered");
+        l2 = new JLabel("wow"); 
   
         // create a new button 
         b = new JButton("submit"); 
   
         // create a object of the text class 
         text te = new text(); 
+        
+        // create a seperator 
+        JSeparator s = new JSeparator();
+        
+        // set layout as vertical 
+        s.setOrientation(SwingConstants.HORIZONTAL); 
   
         // addActionListener to button 
         b.addActionListener(te); 
@@ -47,7 +57,9 @@ class text extends JFrame implements ActionListener {
         // add buttons and textfield to panel 
         p.add(t); 
         p.add(b); 
-        p.add(l); 
+        p.add(l);
+        p.add(s);
+        p.add(l2); 
   
         // add panel to frame 
         f.add(p); 
@@ -65,9 +77,13 @@ class text extends JFrame implements ActionListener {
         if (s.equals("submit")) { 
             // set the text of the label to the text of the field 
             l.setText(t.getText()); 
+            
   
             // set the text of field to blank 
             t.setText("  "); 
+            
+             // set layout 
+             p.setLayout(new GridLayout(0,1)); 
         } 
     } 
 } 
