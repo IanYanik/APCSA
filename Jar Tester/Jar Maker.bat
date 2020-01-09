@@ -1,4 +1,4 @@
 @ECHO OFF
 cd ./
-jar cvf test.jar JarTestFileOne.class JarTestFileTwo.class
+jar cmf Manifest.mf it.jar Newer.class JarTestFileTwo.class
 set /p DUMMY=Hit ENTER to continue...

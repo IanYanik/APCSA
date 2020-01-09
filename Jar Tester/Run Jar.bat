@@ -1,5 +1,4 @@
 @ECHO OFF
 cd ./
-java -cp test.jar JarTestFileOne
-java -cp test.jar JarTestFileTwo
+java -jar it.jar
 set /p DUMMY=Hit ENTER to continue...
