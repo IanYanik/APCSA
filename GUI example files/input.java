@@ -2,9 +2,10 @@
 // given initial text and given number of columns 
 import java.awt.event.*; 
 import javax.swing.*; 
-class text extends JFrame implements ActionListener { 
+class input extends JFrame implements ActionListener { 
     // JTextField 
-    static JTextField t; 
+    static JTextField t;
+    static JTextField x; 
   
     // JFrame 
     static JFrame f;
@@ -19,7 +20,7 @@ class text extends JFrame implements ActionListener {
     static JLabel l2;
   
     // default constructor 
-    text() 
+    input() 
     { 
     } 
   
@@ -27,14 +28,15 @@ class text extends JFrame implements ActionListener {
     public static void main(String[] args) 
     { 
         // create a new frame to store text field and button 
-        f = new JFrame("textfield"); 
-  
+        f = new JFrame("Connect"); 
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
         // create a label to display text 
-        l = new JLabel("nothing entered");
-        l2 = new JLabel("wow"); 
+        //l = new JLabel("nothing entered");
+        //l2 = new JLabel("wow"); 
   
         // create a new button 
-        b = new JButton("submit"); 
+        b = new JButton("Connect"); 
   
         // create a object of the text class 
         text te = new text(); 
@@ -49,23 +51,25 @@ class text extends JFrame implements ActionListener {
         b.addActionListener(te); 
   
         // create a object of JTextField with 16 columns and a given initial text 
-        t = new JTextField("enter the text", 16); 
+        t = new JTextField("Enter IP to connect to", 16);
+        x = new JTextField("Enter port to connect to", 16); 
   
         // create a panel to add buttons and textfield 
         JPanel p = new JPanel(); 
   
         // add buttons and textfield to panel 
         p.add(t); 
+        p.add(x);
         p.add(b); 
-        p.add(l);
-        p.add(s);
+        //p.add(l);
+        //p.add(s);
         //p.add(l2); 
   
         // add panel to frame 
         f.add(p); 
   
         // set the size of frame 
-        f.setSize(300, 300); 
+        f.setSize(200, 125); 
   
         f.show(); 
     } 
