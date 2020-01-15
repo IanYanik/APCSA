@@ -24,6 +24,37 @@ class input extends JFrame implements ActionListener {
     { 
     } 
   
+      public static void infoBox(String infoMessage, String titleBar)
+    {
+        JOptionPane.showMessageDialog(null, infoMessage, "InfoBox: " + titleBar, JOptionPane.INFORMATION_MESSAGE);
+    }
+    
+    public static int checkValid(String IP, String port){
+      int ipPassed = 0;
+      int portPassed = 0;
+      //Check IP
+      ipPassed = 1;
+      //Not implemented yet
+      
+      //Check port
+      int intPort = Integer.parseInt(port);
+      if (intPort > 2000 && intPort < 10000){
+         portPassed = 1;
+      }
+      if (ipPassed == 1 && portPassed == 1){
+      return 3;
+      }
+      else if (ipPassed == 1 && portPassed == 0){
+      return 2;
+      }
+      else if (ipPassed == 0 && portPassed == 1){
+      return 1;
+      }
+      else{
+      return 0;
+      }
+    }
+    
     // main class 
     public static void main(String[] args) 
     { 
@@ -78,16 +109,32 @@ class input extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) 
     { 
         String s = e.getActionCommand(); 
-        if (s.equals("submit")) { 
-            // set the text of the label to the text of the field 
-            l.setText(t.getText()); 
+        if (s.equals("Connect")) { 
+        System.out.println("Submitted");
+            //l.setText(t.getText()); 
+            //t.setText("  ");
+            int failed = 1;
+            String ip = t.getText();
+            String port = x.getText();
             
-  
-            // set the text of field to blank 
-            t.setText("  "); 
-            
-             // set layout 
-             //p.setLayout(new GridLayout(0,1)); 
+            int valid = checkValid(ip, port);
+            if (valid == 3) {
+            failed = 0;
+            }
+            if (valid == 2){
+            infoBox("Invalid Port!", "Error");
+            }
+            if (valid == 1){
+            infoBox("Invalid IP!", "Error");
+            }
+            if (valid == 0){
+            infoBox("Invalid IP and Port!", "Error");
+            }
+            if (failed == 0){
+            String writer = "IP: " + ip + " Port: " + port;
+            FileEdit.writeToFile("ipConfig", writer);
+            System.exit(0);
+            }
         } 
     } 
 } 
