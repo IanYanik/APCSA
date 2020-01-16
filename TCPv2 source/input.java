@@ -2,7 +2,9 @@
 // given initial text and given number of columns 
 import java.awt.event.*; 
 import javax.swing.*; 
-class input extends JFrame implements ActionListener { 
+class input extends JFrame implements ActionListener {
+/*public String IP;
+public int Port;*/
     // JTextField 
     static JTextField t;
     static JTextField x; 
@@ -54,7 +56,7 @@ class input extends JFrame implements ActionListener {
       return 0;
       }
     }
-    
+
     // main class 
     public static void main(String[] args) 
     { 
@@ -134,6 +136,8 @@ class input extends JFrame implements ActionListener {
             String writer = "IP: " + ip + " Port: " + port;
             FileEdit.writeToFile("ipConfig", writer);
             System.exit(0);
+            /*IP = ip;
+            Port = Integer.parseInt(port);*/
             }
         } 
     } 
