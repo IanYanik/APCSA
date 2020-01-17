@@ -2,6 +2,7 @@
 // given initial text and given number of columns 
 import java.awt.event.*; 
 import javax.swing.*; 
+import com.google.common.net.InetAddresses;
 class input extends JFrame implements ActionListener {
 /*public String IP;
 public int Port;*/
@@ -35,8 +36,9 @@ public int Port;*/
       int ipPassed = 0;
       int portPassed = 0;
       //Check IP
+      if (InetAddresses.isInetAddress(IP)){
       ipPassed = 1;
-      //Not implemented yet
+      }
       
       //Check port
       int intPort = Integer.parseInt(port);
