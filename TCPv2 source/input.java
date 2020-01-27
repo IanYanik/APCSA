@@ -1,7 +1,8 @@
 // Java program to create a blank text field with a  
 // given initial text and given number of columns 
 import java.awt.event.*; 
-import javax.swing.*; 
+import javax.swing.*;
+import org.apache.commons.validator.routines.InetAddressValidator;
 class input extends JFrame implements ActionListener {
 /*public String IP;
 public int Port;*/
@@ -35,7 +36,10 @@ public int Port;*/
       int ipPassed = 0;
       int portPassed = 0;
       //Check IP
-      if (isValidInet4Address(IP)) {
+      boolean x = false;
+      InetAddressValidator two = new InetAddressValidator();
+      x = two.isValid(IP);
+      if (x) {
 			ipPassed = 1;
 		}
       
