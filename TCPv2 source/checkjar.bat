@@ -1,3 +1,0 @@
-@ECHO OFF
-jar tf commons-validator-1.6.jar
-set /p DUMMY=Hit ENTER to continue...
