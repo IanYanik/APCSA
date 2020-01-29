@@ -17,6 +17,6 @@ String ip = unprocessedConfig.substring(4,18);
 System.out.println(ip);
 String port = unprocessedConfig.substring(25,29);
 System.out.println(port);
-Socket socket = new Socket(ip, port);
+int port2 = Integer.parseInt(port);
 }
 }
