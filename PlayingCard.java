@@ -13,8 +13,6 @@ public class PlayingCard{
   }
 
   public int pointValue(){
-    System.out.println(cards[0][0]);
-    System.out.println(cards[0][1]);
     String card = "";
     boolean found = false;
     for(int i = 0; i <= 3; i++){
@@ -29,5 +27,44 @@ public class PlayingCard{
     else {
       return Integer.parseInt(card);
     }
+  }
+  
+  public int compareTo(String cord){
+    int dec = compareValue(cord);
+    if (dec > pointValue()){
+      return 1;
+    }
+    else if (dec < pointValue()){
+      return -1;
+    }
+    else {
+      return 0;
+    }
+  }
+
+  public int compareValue(String cord){
+        String card = "";
+    boolean found = false;
+    for(int i = 0; i <= 3; i++){
+      if (cord.equals(cards[i][0])){
+        found = true;
+        card = cards[i][1];
+      }
+    }
+    if(found == false){
+      return Integer.parseInt(cord);
+    }
+    else {
+      return Integer.parseInt(card);
+    }
+  }
+
+  public String getDisplayValue(){
+    return displayValue;
+  }
+
+  public String printCard(){
+    String com = "Suit: " + suit + ". Value: " + displayValue;
+    return com;
   }
 }
