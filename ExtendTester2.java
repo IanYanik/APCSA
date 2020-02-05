@@ -1,5 +1,7 @@
 public class ExtendTester2 extends ExtendTester {
-@Override
+    public ExtendTester2() {
+        super("MyThread");
+    }
 public void run(){
 //printTest();
 }

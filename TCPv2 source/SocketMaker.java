@@ -4,7 +4,7 @@ public class SocketMaker {
 
 public static Socket makeSocket(String ip, int port){
 //try (ServerSocket serverSocket = new ServerSocket(port)) {
-Socket socket = Socket();
+Socket socket = new Socket();
 try {
 socket = new Socket(ip, port);
 System.out.println(socket);
