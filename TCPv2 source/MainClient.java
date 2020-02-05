@@ -18,6 +18,7 @@ System.out.println(ip);
 String port = unprocessedConfig.substring(25,29);
 System.out.println(port);
 int port2 = Integer.parseInt(port);
-SocketMaker.makeSocket(ip, port2);
+Socket socket = SocketMaker.makeSocket(ip, port2);
+ClientConnect.connect(socket);
 }
 }
