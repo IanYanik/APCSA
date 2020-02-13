@@ -17,6 +17,11 @@ System.out.println("Server not found: " + ex.getMessage());
 } catch (IOException ex) { 
 System.out.println("I/O error: " + ex.getMessage());
 }
+InputStream input;
+while(!input.equals("bye")){
+input = socket.getInputStream();
+BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+}
 }
 public void sendMessage(String message){
 try{
