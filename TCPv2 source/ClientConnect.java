@@ -1,6 +1,7 @@
 import java.net.*;
 import java.io.*;
 import java.util.*;
+import javax.swing.JOptionPane;
 public class ClientConnect {
 OutputStream output;
 PrintWriter writer;
@@ -12,16 +13,19 @@ try{
 output = socket.getOutputStream();
 writer = new PrintWriter(output, true);
 console = System.console();
-} catch (UnknownHostException ex) {
-System.out.println("Server not found: " + ex.getMessage());
-} catch (IOException ex) { 
-System.out.println("I/O error: " + ex.getMessage());
-}
-InputStream input;
+InputStream input = socket.getInputStream();
 while(!input.equals("bye")){
 input = socket.getInputStream();
 BufferedReader reader = new BufferedReader(new InputStreamReader(input));
 }
+} catch (UnknownHostException ex) {
+JOptionPane.showMessageDialog(null, "Server not found: " + ex.getMessage());
+System.out.println("Server not found: " + ex.getMessage());
+} catch (IOException ex) { 
+JOptionPane.showMessageDialog(null, "I/O error: " + ex.getMessage());
+System.out.println("I/O error: " + ex.getMessage());
+}
+
 }
 public void sendMessage(String message){
 try{
