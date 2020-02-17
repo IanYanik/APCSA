@@ -7,6 +7,7 @@ OutputStream output;
 PrintWriter writer;
 Console console;
 Socket socket;
+BufferedReader reader;
 public void connect(Socket socket2){
 socket = socket2;
 try{
@@ -16,7 +17,7 @@ console = System.console();
 InputStream input = socket.getInputStream();
 while(!input.equals("bye")){
 input = socket.getInputStream();
-BufferedReader reader = new BufferedReader(new InputStreamReader(input));
+reader = new BufferedReader(new InputStreamReader(input));
 }
 } catch (UnknownHostException ex) {
 JOptionPane.showMessageDialog(null, "Server not found: " + ex.getMessage());
@@ -37,5 +38,9 @@ catch(Exception e) {
 System.out.println("Oh no");
 }
 writer.println(message);
+}
+
+public BufferedReader getMessage(){
+return reader;
 }
 }
