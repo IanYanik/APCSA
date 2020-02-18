@@ -2,6 +2,7 @@ import java.net.*;
 import java.io.*;
 import java.util.*;
 import javax.swing.JOptionPane;
+import org.apache.commons.io.IOUtils.*;
 public class ClientConnect {
 OutputStream output;
 PrintWriter writer;
@@ -40,7 +41,8 @@ System.out.println("Oh no");
 writer.println(message);
 }
 
-public BufferedReader getMessage(){
+public String getMessage(){
+String converted = to
 return reader;
 }
 }
