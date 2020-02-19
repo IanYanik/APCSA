@@ -19,6 +19,9 @@ String port = unprocessedConfig.substring(25,29);
 System.out.println(port);
 int port2 = Integer.parseInt(port);
 Socket socket = SocketMaker.makeSocket(ip, port2);
-ClientConnect.connect(socket);
+ClientConnect con = new ClientConnect;
+con.connect(socket);
+//hoo
+
 }
 }
