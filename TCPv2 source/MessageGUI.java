@@ -3,22 +3,27 @@ import java.awt.*;
 import java.awt.event.*;
 public class MessageGUI{
     static JFrame frame;
+    static JLabel label;
     static String[] names = {"", "Cosmo", "Elmo", "Hugo",
                              "Jethro", "Laszlo", "Milo", "Nemo",
                              "Otto", "Ringo", "Rocco", "Rollo"};
                              
 public void showGUI(){
+frame = new JFrame("Connect");
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+label = new JLabel("Placeholder");
    String selectedName = ListDialog.showDialog(
       frame,
-      button,
-      "Baby names ending in O:",
+      label,
+      "Messages",
       "Name Chooser",
       names,
-      name.getText(),
+      "placeholder",
       "Cosmo  ");
 }
+names[4] = "test";
 public static void main(String[] args){
-MessageGUI run = new showGUI();
-//run.showGUI();
+MessageGUI run = new MessageGUI();
+run.showGUI();
 }
 }

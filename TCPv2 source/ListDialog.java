@@ -177,9 +177,9 @@ public class ListDialog extends JDialog
         buttonPane.setLayout(new BoxLayout(buttonPane, BoxLayout.LINE_AXIS));
         buttonPane.setBorder(BorderFactory.createEmptyBorder(0, 10, 10, 10));
         buttonPane.add(Box.createHorizontalGlue());
-        buttonPane.add(cancelButton);
+        //buttonPane.add(cancelButton);
         buttonPane.add(Box.createRigidArea(new Dimension(10, 0)));
-        buttonPane.add(setButton);
+        //buttonPane.add(setButton);
 
         //Put everything together, using the content pane's BorderLayout.
         Container contentPane = getContentPane();
