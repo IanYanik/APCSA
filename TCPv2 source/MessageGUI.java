@@ -21,7 +21,7 @@ label = new JLabel("Placeholder");
       "placeholder",
       "Cosmo  ");
 }
-names[4] = "test";
+names[4] = JOptionPane.showInputDialog("num1");
 public static void main(String[] args){
 MessageGUI run = new MessageGUI();
 run.showGUI();
