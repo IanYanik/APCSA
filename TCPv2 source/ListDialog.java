@@ -85,6 +85,8 @@ public class ListDialog extends JDialog
                                 initialValue,
                                 longValue);
         dialog.setVisible(true);
+        //makes it appear a second time if closed (Line added by Ian)
+        //dialog.setVisible(true);
         return value;
     }
 
