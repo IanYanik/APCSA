@@ -59,6 +59,7 @@ public class ListDialog extends JDialog
     private static ListDialog dialog;
     private static String value = "";
     private JList list;
+    private String[] changeTest = new String[1];
 
     /**
      * Set up and show the dialog.  The first Component argument
@@ -69,21 +70,30 @@ public class ListDialog extends JDialog
      * otherwise, it should be the component on top of which the
      * dialog should appear.
      */
-    public static String showDialog(Component frameComp,
+    public String showDialog(Component frameComp,
                                     Component locationComp,
                                     String labelText,
                                     String title,
                                     String[] possibleValues,
                                     String initialValue,
                                     String longValue) {
+        changeTest = possibleValues;
         Frame frame = JOptionPane.getFrameForComponent(frameComp);
-        dialog = new ListDialog(frame,
+        /*dialog = new ListDialog(frame,
                                 locationComp,
                                 labelText,
                                 title,
                                 possibleValues,
                                 initialValue,
+                                longValue);*/
+        dialog = new ListDialog(frame,
+                                locationComp,
+                                labelText,
+                                title,
+                                changeTest,
+                                initialValue,
                                 longValue);
+        changeTest[2] = "Hoo";
         dialog.setVisible(true);
         //makes it appear a second time if closed (Line added by Ian)
         //dialog.setVisible(true);

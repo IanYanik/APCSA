@@ -8,10 +8,7 @@ public class MessageGUI implements Runnable{
                              "Jethro", "Laszlo", "Milo", "Nemo",
                              "Otto", "Ringo", "Rocco", "Rollo"};
                              
-public void run(){
-frame = new JFrame("Connect");
-frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-label = new JLabel("Placeholder");
+public void tester(JFrame frame, JLabel label){
    String selectedName = ListDialog.showDialog(
       frame,
       label,
@@ -20,6 +17,19 @@ label = new JLabel("Placeholder");
       names,
       "placeholder",
       "Cosmo  ");
+      }                             
+public void run(){
+frame = new JFrame("Connect");
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+label = new JLabel("Placeholder");
+   /*String selectedName = ListDialog.showDialog(
+      frame,
+      label,
+      "Messages",
+      "Name Chooser",
+      names,
+      "placeholder",
+      "Cosmo  ");*/
 
 //String test;
 //test = JOptionPane.showInputDialog("num1");
