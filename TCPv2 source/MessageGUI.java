@@ -9,20 +9,7 @@ public class MessageGUI implements Runnable{
                              "Otto", "Ringo", "Rocco", "Rollo"};
                              
 public void tester(JFrame frame, JLabel label){
-   String selectedName = ListDialog.showDialog(
-      frame,
-      label,
-      "Messages",
-      "Name Chooser",
-      names,
-      "placeholder",
-      "Cosmo  ");
-      }                             
-public void run(){
-frame = new JFrame("Connect");
-frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-label = new JLabel("Placeholder");
-   /*String selectedName = ListDialog.showDialog(
+ /*  String selectedName = ListDialog.showDialog(
       frame,
       label,
       "Messages",
@@ -30,6 +17,27 @@ label = new JLabel("Placeholder");
       names,
       "placeholder",
       "Cosmo  ");*/
+      }                             
+public void run(){
+frame = new JFrame("Connect");
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+label = new JLabel("Placeholder");
+   String selectedName = ListDialog.showDialog(
+      frame,
+      label,
+      "Messages",
+      "Name Chooser",
+      names,
+      "placeholder",
+      "Cosmo  ", false);
+    String selectedNameTwo = ListDialog.showDialog(
+      frame,
+      label,
+      "Messages",
+      "Name Chooser",
+      names,
+      "placeholder",
+      "Cosmo  ", true);
 
 //String test;
 //test = JOptionPane.showInputDialog("num1");
@@ -38,8 +46,9 @@ label = new JLabel("Placeholder");
 System.exit(0);
 }
 public static void main(String[] args){
-MessageGUI runer = new MessageGUI();
-Thread t = new Thread(runer);
+//MessageGUI runer = new MessageGUI();
+//runner.run();
+Thread t = new Thread();
 t.start();
 /*run.showGUI();
 names[4] = JOptionPane.showInputDialog("num1");
